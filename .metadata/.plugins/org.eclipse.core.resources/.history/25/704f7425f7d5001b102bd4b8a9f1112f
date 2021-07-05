@@ -1,0 +1,5 @@
+package com.cndvn.dto;
+
+public class NewDTO {
+
+}
