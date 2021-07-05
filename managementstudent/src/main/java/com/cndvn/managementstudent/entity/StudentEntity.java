@@ -13,7 +13,7 @@ public class StudentEntity {
 
     @Column(name = "id")
     @Id
-    private String id;
+    private Long id;
 
     @Column(name = "lastname")
     private String lastName;
@@ -24,15 +24,15 @@ public class StudentEntity {
     @Column(name = "major")
     private String major;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "status_id")
     private StatusEntity status;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -20,7 +20,7 @@ public class Account {
 
     @Column(name = "username")
     @Id
-    private String userName;
+    private Long userName;
 
     @Column(name = "password")
     private String password;
