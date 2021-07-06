@@ -36,7 +36,7 @@ public class SubjectController {
     Subject enrollStudentToSubject(
             @PathVariable Long subjectId,
             @PathVariable Long studentId
-    ){
+    ) {
         Subject subject = subjectRepository.findById(subjectId).get();
         Student student = studentRepository.findById(studentId).get();
         subject.enrollStudent(student);
@@ -47,7 +47,7 @@ public class SubjectController {
     Subject assignTeacherToSubject(
             @PathVariable Long subjectId,
             @PathVariable Long teacherId
-    ){
+    ) {
         Subject subject = subjectRepository.findById(subjectId).get();
         Teacher teacher = teacherRepository.findById(teacherId).get();
         subject.assignTeacher(teacher);

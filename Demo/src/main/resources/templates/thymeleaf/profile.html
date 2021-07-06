@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <!--    Css-->
+    <link rel="stylesheet" th:href="@{/thymeleaf/css/bootstrap.css}">
+
+    <!--    Js-->
+    <link rel="stylesheet" th:href="@{/thymeleaf/js.bootstrap.js}">
+
+</head>
+<body>
+    <h1 th:utext="#{cnd.hello}"></h1>
+    <h2>CND Profile</h2>
+    <ul>
+    <!--Duyệt toàn bộ phần tử trong biến "loadProfile"-->
+        <li th:each="info : ${loadProfile}">
+            <!-- Với mỗi phần tử, lấy ra key và value -->
+            <span th:text="*{info.key}"></span> : <span th:text="*{info.value}"></span>
+        </li>
+    </ul>
+</body>
+</html>

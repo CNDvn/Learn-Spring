@@ -6,11 +6,11 @@ import java.util.Date;
 
 @Repository
 public class MyRepository {
-    public  String getAppName(){
+    public String getAppName() {
         return "Hello Spring App";
     }
 
-    public Date getSystemDateTime(){
+    public Date getSystemDateTime() {
         return new Date();
     }
 }

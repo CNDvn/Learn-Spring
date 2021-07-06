@@ -26,6 +26,7 @@ public class Subject {
 
     @ManyToOne
     private Teacher teacher;
+
     public Long getId() {
         return id;
     }

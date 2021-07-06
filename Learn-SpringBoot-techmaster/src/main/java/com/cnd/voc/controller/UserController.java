@@ -28,6 +28,7 @@ public class UserController {
         UserDto user = userService.getUserById(id);
         return ResponseEntity.ok(user);
     }
+
     @GetMapping("/search")
     public ResponseEntity<?> getUserById(@RequestParam(value = "name_user", required = false, defaultValue = "") String name) {
         List<UserDto> users = userService.searchUserByName(name);

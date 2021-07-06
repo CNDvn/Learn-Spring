@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component()
-public class VNEngine implements Engine{
+public class VNEngine implements Engine {
 
     @Override
     public void run() {
@@ -16,12 +16,12 @@ public class VNEngine implements Engine{
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println("init data");
     }
 
     @PreDestroy
-    public void stop(){
+    public void stop() {
         System.out.println("stop data");
     }
 }

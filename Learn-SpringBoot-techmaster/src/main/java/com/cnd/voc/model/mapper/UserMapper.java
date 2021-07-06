@@ -4,7 +4,7 @@ import com.cnd.voc.entity.User;
 import com.cnd.voc.model.dto.UserDto;
 
 public class UserMapper {
-    public static UserDto toUserDto(User user){
+    public static UserDto toUserDto(User user) {
         UserDto tmp = new UserDto();
         tmp.setId(user.getId());
         tmp.setName(user.getName());

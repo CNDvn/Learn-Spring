@@ -10,9 +10,9 @@ import com.cndvn.dto.NewDTO;
 
 @Controller
 public class NewAPI {
-	@RequestMapping(value = "/new", method = RequestMethod.POST)
-	@ResponseBody
-	public NewDTO createNew(@RequestBody NewDTO model) {
-		return model;
-	}
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    @ResponseBody
+    public NewDTO createNew(@RequestBody NewDTO model) {
+        return model;
+    }
 }

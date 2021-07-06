@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component()
 @Primary
-public class ChinaEngine implements Engine{
+public class ChinaEngine implements Engine {
     @Override
     public void run() {
         System.out.println("china");

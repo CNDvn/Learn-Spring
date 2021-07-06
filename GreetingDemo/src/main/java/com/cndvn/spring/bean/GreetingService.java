@@ -10,11 +10,11 @@ public class GreetingService {
     @Autowired
     private Language language;
 
-    public GreetingService(){
+    public GreetingService() {
 
     }
 
-    public void sayGreeting(){
+    public void sayGreeting() {
         String greeting = language.getGreeting();
         System.out.println("Greeting: " + greeting);
     }

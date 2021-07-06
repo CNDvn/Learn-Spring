@@ -20,7 +20,7 @@ public class NewService implements INewService {
     private NewRepository newRepository;
 
     @Autowired
-    private CategoryRepository categoryRepository ;
+    private CategoryRepository categoryRepository;
 
     @Autowired
     private NewConverter newConverter;
@@ -28,10 +28,10 @@ public class NewService implements INewService {
     @Override
     public NewDTO save(NewDTO newDTO) {
         NewEntity newEntity = new NewEntity();
-        if(newDTO.getId() != null){
+        if (newDTO.getId() != null) {
             NewEntity oldNewEntity = newRepository.findOne(newDTO.getId());
-            newEntity = newConverter.toEntity(newDTO,oldNewEntity);
-        }else{
+            newEntity = newConverter.toEntity(newDTO, oldNewEntity);
+        } else {
             newEntity = newConverter.toEntity(newDTO);
         }
         CategoryEntity categoryEntity = categoryRepository.findOneByCode(newDTO.getCategoryCode());
@@ -52,7 +52,7 @@ public class NewService implements INewService {
 
     @Override
     public void delete(long[] ids) {
-        for (long item : ids){
+        for (long item : ids) {
             newRepository.delete(item);
         }
     }
@@ -61,7 +61,7 @@ public class NewService implements INewService {
     public List<NewDTO> findAll(Pageable pageable) {
         List<NewDTO> results = new ArrayList<>();
         List<NewEntity> entities = newRepository.findAll(pageable).getContent();
-        for (NewEntity item : entities){
+        for (NewEntity item : entities) {
             NewDTO newDTO = newConverter.toDTO(item);
             results.add(newDTO);
         }
@@ -72,7 +72,7 @@ public class NewService implements INewService {
     public List<NewDTO> findAll() {
         List<NewDTO> results = new ArrayList<>();
         List<NewEntity> entities = newRepository.findAll();
-        for (NewEntity item : entities){
+        for (NewEntity item : entities) {
             NewDTO newDTO = newConverter.toDTO(item);
             results.add(newDTO);
         }
@@ -81,7 +81,7 @@ public class NewService implements INewService {
 
     @Override
     public int totalItem() {
-        return (int)newRepository.count();
+        return (int) newRepository.count();
     }
 
 }

@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> getListUser() {
         List<UserDto> result = new ArrayList<>();
-        for(User user : users){
+        for (User user : users) {
             result.add(UserMapper.toUserDto(user));
         }
         return result;
@@ -32,8 +32,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto getUserById(int id) {
-        for(User user : users)
-            if(user.getId() == id)
+        for (User user : users)
+            if (user.getId() == id)
                 return UserMapper.toUserDto(user);
 
         throw new NotFoundException("User không tồn tại trong hệ thống");
@@ -42,8 +42,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> searchUserByName(String name) {
         List<UserDto> result = new ArrayList<>();
-        for(User user : users)
-            if(user.getName().contains(name))
+        for (User user : users)
+            if (user.getName().contains(name))
                 result.add(UserMapper.toUserDto(user));
 
         return result;

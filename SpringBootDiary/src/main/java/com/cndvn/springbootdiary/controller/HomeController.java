@@ -12,7 +12,7 @@ public class HomeController {
     private Engine engine;
 
     @GetMapping("/")
-    public String homePage(){
+    public String homePage() {
         engine.run();
         return "index";
     }

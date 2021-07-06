@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Never Die</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!--    Css-->
+    <link rel="stylesheet" th:href="@{/thymeleaf/css/bootstrap.css}">
+
+    <!--    Js-->
+    <link rel="stylesheet" th:href="@{/thymeleaf/js.bootstrap.js}">
+
+</head>
+<body>
+    <h1 th:utext="#{cnd.hello}"></h1>
+
+    <a th:href="@{/thymeleaf/profile}" class="btn btn-pprimary">CND profile</a>
+</body>
+</html>
